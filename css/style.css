@@ -91,7 +91,7 @@ body {
   color: var(--white);
   font-weight: var(--fw-regular);
   padding: var(--space-600);
-  background-color: var(--card-bg-color, black);
+  background-color: var(--card-bg-color, var(--black));
 }
 
 .card-gold {
@@ -139,7 +139,7 @@ body {
   cursor: pointer;
 
   background-color: var(--gray-100);
-  color: var(--btn-color, --black);
+  color: var(--btn-color, var(--black));
   padding: var(--btn-padding);
   border-radius: 100vw;
   white-space: nowrap;
@@ -180,11 +180,11 @@ body {
     padding: var(--space-600);
   }
 
-  .card:first-of-type {
+  .card:first-child {
     border-radius: var(--br-regular) 0px 0px var(--br-regular);
   }
 
-  .card:last-of-type {
+  .card:last-child {
     border-radius: 0px var(--br-regular) var(--br-regular) 0px;
   }
 
