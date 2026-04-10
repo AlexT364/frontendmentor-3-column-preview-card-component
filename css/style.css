@@ -1,0 +1,203 @@
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&family=Lexend+Deca:wght@100..900&display=swap");
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0px;
+  padding: 0px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-size: inherit;
+}
+
+:root {
+  /* Colors */
+  --white: hsl(0 100% 100%);
+  --black: hsl(0 0% 0%);
+  --gray-100: hsl(0 0% 95%);
+
+  --green-950: hsl(179 100% 13%);
+  --green-500: hsl(170 76% 41%);
+
+  --cyan-800: hsl(184 100% 22%);
+  --cyan-500: hsl(184 67% 45%);
+
+  --gold-500: hsl(31 77% 52%);
+  --gold-200: hsl(42 100% 73%);
+
+  /* Typography */
+  /* Font-size */
+  --fs-m: 0.9375rem; /*15px*/
+  --fs-l: 2.5rem; /*40px*/
+
+  /* Font weight */
+  --fw-bold: 700;
+  --fw-regular: 400;
+
+  /* Line height */
+  --lh-regular: 1.2;
+  --lh-big: 1.65;
+
+  /* Spacing */
+  --space-0: 0rem; /*0px*/
+  --space-100: 0.5rem; /*8px*/
+  --space-300: 1.5rem; /*24px*/
+  --space-400: 2rem; /*32px*/
+  --space-500: 2.5rem; /*40px*/
+  --space-600: 3rem; /*48px*/
+  --space-1000: 5rem; /*80px*/
+
+  /* Border radius */
+  --br-regular: 0.625rem; /*10px*/
+
+  /*Button padding*/
+  --btn-padding: 0.75em 2em;
+
+  /* Container */
+  --container-s: 18rem;
+  --container-m: 38rem;
+  --container-l: 58rem;
+}
+
+body {
+  display: flex;
+  flex-flow: column nowrap;
+  min-height: 100vh;
+  font-family: "Lexend Deca", sans-serif;
+  font-size: var(--fs-m);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-big);
+
+  background-color: var(--gray-100);
+}
+
+.cards {
+  min-width: var(--container-s);
+  margin-inline: var(--space-300);
+  display: flex;
+  flex-flow: column nowrap;
+  margin-block: auto;
+}
+
+.card {
+  color: var(--white);
+  font-weight: var(--fw-regular);
+  padding: var(--space-600);
+  background-color: var(--card-bg-color, black);
+}
+
+.card-gold {
+  --card-bg-color: var(--gold-500);
+  --btn-color: var(--gold-500);
+}
+
+.card-cyan {
+  --card-bg-color: var(--cyan-800);
+  --btn-color: var(--cyan-800);
+}
+
+.card-green {
+  --card-bg-color: var(--green-950);
+  --btn-color: var(--green-950);
+}
+
+.card:first-child {
+  border-radius: var(--br-regular) var(--br-regular) 0px 0px;
+}
+
+.card:last-child {
+  border-radius: 0px 0px var(--br-regular) var(--br-regular);
+}
+
+.card__content {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: var(--space-300);
+  margin-block: var(--space-400) var(--space-300);
+}
+
+.card__header {
+  font-family: "Big Shoulders", sans-serif;
+  font-size: var(--fs-l);
+  font-weight: var(--fw-bold);
+  line-height: var(--lh-regular);
+  color: var(--gray-100);
+}
+
+.btn {
+  display: inline-block;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+
+  background-color: var(--gray-100);
+  color: var(--btn-color, --black);
+  padding: var(--btn-padding);
+  border-radius: 100vw;
+  white-space: nowrap;
+
+  transition:
+    background-color 0.2s,
+    color 0.2s;
+}
+
+.btn:hover {
+  color: var(--white);
+  outline: 2px solid white;
+  background-color: transparent;
+}
+
+.btn:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 2px;
+}
+
+@media (min-width: 48rem /*768px*/) {
+  .cards {
+    max-width: var(--container-m);
+    margin-inline: auto;
+  }
+
+  .card {
+    padding-inline: var(--space-1000);
+  }
+}
+@media (min-width: 90rem /*1440px*/) {
+  .cards {
+    max-width: var(--container-l);
+    flex-direction: row;
+  }
+
+  .card {
+    padding: var(--space-600);
+  }
+
+  .card:first-of-type {
+    border-radius: var(--br-regular) 0px 0px var(--br-regular);
+  }
+
+  .card:last-of-type {
+    border-radius: 0px var(--br-regular) var(--br-regular) 0px;
+  }
+
+  .card__content {
+    margin-block: var(--space-500) var(--space-1000);
+  }
+}
+
+.attribution {
+  margin-top: auto;
+  font-size: 0.6875rem;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
