@@ -92,6 +92,7 @@ body {
   font-weight: var(--fw-regular);
   padding: var(--space-600);
   background-color: var(--card-bg-color, var(--black));
+  flex: 1;
 }
 
 .card-gold {
