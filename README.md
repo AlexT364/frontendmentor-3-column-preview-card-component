@@ -17,13 +17,13 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL](https://www.frontendmentor.io/solutions/solution-for-3-column-preview-card-component-hbxX6SWHhv)
+- Live Site URL: [Live site URL](https://alext364.github.io/frontendmentor-3-column-preview-card-component/)
 
 ## Author
 
 - GitHub - [Aleksandr Tyurin](https://github.com/AlexT364)
-- Frontend Mentor - [](https://www.frontendmentor.io/profile/AlexT364)
+- Frontend Mentor - [Aleksandr Tyurin](https://www.frontendmentor.io/profile/AlexT364)
 
 
 
